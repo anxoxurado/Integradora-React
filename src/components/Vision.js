@@ -1,6 +1,6 @@
 // src/components/Vision.js
 import React from 'react';
-
+import './Preloader.css';
 
 const Vision = () => {
   return (

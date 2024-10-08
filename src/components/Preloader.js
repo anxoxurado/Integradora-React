@@ -1,12 +1,24 @@
 // src/components/Preloader.js
-import React, { useEffect, useState } from 'react';
 import './Preloader.css';
+import React, { useEffect, useState } from 'react';
+
 
 const Preloader = () => {
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded, setLoading] = useState(false);
 
   useEffect(() => {
     const totalDuration = 10000;
+
+    const handleLoadComplete = () => {
+      setLoaded(false);
+      document.body.classList.remove('loading');
+      // Eliminar las clases 'hidden' para evitar el blur
+      const hiddenElements = document.querySelectorAll('.hidden');
+      hiddenElements.forEach(element => element.classList.remove('hidden'));
+      // Forzar actualización
+      window.dispatchEvent(new Event('resize'));
+    };
+    
 
     const handleAnimationEnd = () => {
       setTimeout(() => {
@@ -38,7 +50,7 @@ const Preloader = () => {
   return (
     <div id="preloader" className={loaded ? 'loaded' : ''}>
       <div className="title">
-        <h1>¿Vamos al centro?</h1>
+        <h1>¿Vamos al centro</h1>
         <div className="containerGradient">
           <div className="container">
             <div>

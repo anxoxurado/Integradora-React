@@ -1,6 +1,6 @@
 // src/components/AboutUs.js
 import React from 'react';
-
+import './Preloader.css';
 import brandingLogo from '../elements/Component 9applogo.png';
 
 const AboutUs = () => {

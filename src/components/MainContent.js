@@ -4,6 +4,8 @@ import Mision from './Mision';
 import Vision from './Vision';
 import CardList from './CardList';
 import Preloader from './Preloader';
+import Footer from './Footer';
+import './Preloader.css';
 
 import headerImg from '../elements/drone.jpeg';
 import gradientImg from '../elements/Gradiente purpura.png';
@@ -48,6 +50,7 @@ const MainContent = () => {
         <Mision />
         <Vision />
         <CardList />
+        <Footer />
       </div>
     </>
   );

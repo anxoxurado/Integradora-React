@@ -1,6 +1,6 @@
 // src/components/Mision.js
 import React from 'react';
-
+import './Preloader.css';
 
 const Mision = () => {
   return (
